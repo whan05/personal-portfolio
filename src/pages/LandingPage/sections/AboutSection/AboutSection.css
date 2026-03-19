@@ -1,0 +1,180 @@
+.about-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  gap: 72px;
+  align-items: center;
+  align-content: center;
+  background: rgba(216, 223, 245, 0.72);
+}
+
+.about-copy {
+  display: grid;
+  gap: 56px;
+}
+
+.about-title {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin: 0;
+  font-size: clamp(4rem, 9vw, 6.6rem);
+  letter-spacing: -0.05em;
+}
+
+.about-title span {
+  font-weight: 300;
+}
+
+.about-title strong {
+  font-weight: 800;
+}
+
+.about-text {
+  max-width: 680px;
+  display: grid;
+  gap: 24px;
+  color: var(--muted);
+  font-size: 1.16rem;
+  line-height: 1.6;
+}
+
+.about-stats {
+  display: grid;
+  gap: 36px;
+}
+
+.tool-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.tool-chip {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  display: grid;
+  place-items: center;
+  border: 2px solid rgba(16, 33, 23, 0.9);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.tool-chip::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 100%;
+  height: 100%;
+  background: rgba(136, 164, 237, 0.18);
+  z-index: -1;
+}
+
+.tool-chip span {
+  font-family: var(--heading);
+  font-size: 2rem;
+  color: var(--text-h);
+}
+
+.project-counter {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+}
+
+.project-counter strong {
+  font-family: var(--heading);
+  font-size: clamp(4rem, 8vw, 5.8rem);
+  line-height: 0.9;
+  color: var(--text-h);
+}
+
+.project-counter span {
+  font-size: 1.2rem;
+  color: var(--text-h);
+  letter-spacing: 0.05em;
+}
+
+.counter-mark {
+  width: 122px;
+  height: 20px;
+  background:
+    linear-gradient(
+      -45deg,
+      transparent 0 8%,
+      var(--text-h) 8% 12%,
+      transparent 12% 28%,
+      var(--text-h) 28% 32%,
+      transparent 32% 48%,
+      var(--text-h) 48% 52%,
+      transparent 52% 68%,
+      var(--text-h) 68% 72%,
+      transparent 72% 100%
+    );
+}
+
+.skill-list {
+  display: grid;
+  gap: 28px;
+}
+
+.skill-item {
+  display: grid;
+  gap: 10px;
+}
+
+.skill-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--text-h);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.skill-track {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: rgba(136, 164, 237, 0.18);
+}
+
+.skill-fill {
+  height: 100%;
+  background: var(--text-h);
+}
+
+@media (max-width: 960px) {
+  .about-panel {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding-top: 72px;
+  }
+
+  .about-copy {
+    gap: 28px;
+  }
+
+  .about-title {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .tool-row {
+    gap: 16px;
+  }
+
+  .tool-chip {
+    width: 62px;
+    height: 62px;
+  }
+
+  .tool-chip span {
+    font-size: 1.55rem;
+  }
+}

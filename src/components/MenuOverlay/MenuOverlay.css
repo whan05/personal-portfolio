@@ -1,0 +1,47 @@
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 15;
+  display: grid;
+  place-items: center;
+  padding: 96px 24px 48px;
+  background: rgba(16, 21, 17, 0.76);
+  backdrop-filter: blur(18px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.menu-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.overlay-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f4f0e4;
+  text-decoration: none;
+  font-family: var(--heading);
+  font-size: clamp(1.8rem, 3vw, 3.5rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .overlay-link {
+    text-align: center;
+    font-size: clamp(1.45rem, 8vw, 2.3rem);
+  }
+}

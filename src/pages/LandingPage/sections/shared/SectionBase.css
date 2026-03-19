@@ -1,0 +1,25 @@
+.panel {
+  position: relative;
+  flex: 0 0 100svh;
+  height: 100svh;
+  padding: calc(88px + var(--header-offset)) 32px 88px;
+  border-bottom: 1px solid rgba(15, 31, 24, 0.08);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  overflow: hidden;
+}
+
+.section-kicker {
+  margin: 0 0 18px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+@media (max-width: 960px) {
+  .panel {
+    padding: calc(56px + var(--header-offset)) 20px 56px;
+  }
+}

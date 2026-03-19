@@ -1,0 +1,22 @@
+.page-shell {
+  position: relative;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.page-main {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+}
+
+.page-sequence {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+}

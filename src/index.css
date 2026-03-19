@@ -1,111 +1,136 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --bg: #eef4e7;
+  --bg-soft: #fff8ef;
+  --text: #355246;
+  --text-h: #102117;
+  --muted: #5c7468;
+  --accent: #1f8f68;
+  --border: rgba(16, 33, 23, 0.12);
+  --header-offset: 107px;
+  --sans: 'DM Sans', 'Segoe UI', sans-serif;
+  --heading: 'Syne', 'Avenir Next', 'Segoe UI', sans-serif;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
+  font: 18px/1.6 var(--sans);
+  letter-spacing: 0.01em;
   color: var(--text);
-  background: var(--bg);
+  background:
+    radial-gradient(circle at top left, rgba(106, 196, 159, 0.3), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(255, 210, 161, 0.34), transparent 24%),
+    linear-gradient(180deg, #eef4e7 0%, #edf2df 100%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+html {
+  scroll-padding-top: var(--header-offset);
 }
 
 body {
   margin: 0;
+  min-width: 320px;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: auto;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  top: 120px;
+  left: 38px;
+  width: 110px;
+  height: 110px;
+  border-radius: 36px;
+  background:
+    linear-gradient(90deg, transparent 15%, rgba(16, 33, 23, 0.92) 15% 21%, transparent 21% 31%, rgba(16, 33, 23, 0.92) 31% 37%, transparent 37% 47%, rgba(16, 33, 23, 0.92) 47% 53%, transparent 53% 63%, rgba(16, 33, 23, 0.92) 63% 69%, transparent 69% 79%, rgba(16, 33, 23, 0.92) 79% 85%, transparent 85%);
+  opacity: 0.15;
+}
+
+body::after {
+  right: 42px;
+  bottom: 42px;
+  width: 180px;
+  height: 180px;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  background:
+    linear-gradient(135deg, rgba(106, 196, 159, 0.22), rgba(16, 33, 23, 0.1));
+}
+
+a,
+button {
+  font: inherit;
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: rgba(238, 244, 231, 0.82);
+  box-shadow: none;
 }
 
 h1,
 h2 {
   font-family: var(--heading);
-  font-weight: 500;
   color: var(--text-h);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
 }
 
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
+  font-size: clamp(4rem, 10vw, 8rem);
 }
+
 h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 4vw, 3.6rem);
 }
+
 p {
   margin: 0;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
+@media (max-width: 960px) {
+  :root {
+    font-size: 16px;
+    --header-offset: 96px;
+  }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+  html {
+    scroll-padding-top: var(--header-offset);
+  }
+
+  body::before {
+    top: 96px;
+    left: 18px;
+    width: 78px;
+    height: 78px;
+  }
+
+  body::after {
+    right: 18px;
+    bottom: 18px;
+    width: 108px;
+    height: 108px;
+  }
+
+  #root {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
 }

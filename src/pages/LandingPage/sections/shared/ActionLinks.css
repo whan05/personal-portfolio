@@ -1,0 +1,22 @@
+.primary-link,
+.secondary-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 154px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.primary-link {
+  background: var(--text-h);
+  color: #f5f2e8;
+}
+
+.secondary-link {
+  color: var(--text-h);
+  border: 1px solid rgba(15, 31, 24, 0.14);
+  background: rgba(255, 255, 255, 0.42);
+}

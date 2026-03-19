@@ -1,0 +1,54 @@
+.side-dots {
+  position: fixed;
+  right: 12px;
+  top: 50%;
+  z-index: 18;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transform: translateY(-50%);
+  width: 24px;
+  align-items: center;
+}
+
+.side-dot {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.side-dot-core {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(16, 33, 23, 0.22);
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.side-dot:hover .side-dot-core,
+.side-dot:focus-visible .side-dot-core,
+.side-dot.is-active .side-dot-core {
+  transform: scale(1.7);
+}
+
+.side-dot.is-active .side-dot-core {
+  background: var(--text-h);
+  box-shadow: 0 0 0 4px rgba(31, 143, 104, 0.18);
+}
+
+@media (max-width: 960px) {
+  .side-dots {
+    right: 6px;
+    gap: 10px;
+  }
+}

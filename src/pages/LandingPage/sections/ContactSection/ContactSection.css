@@ -178,7 +178,7 @@
     grid-template-columns: 1fr;
     gap: 34px;
     min-height: auto;
-    padding: calc(var(--header-offset) + 28px) 20px 32px;
+    padding: calc(var(--header-offset) + 28px) 8px 32px;
   }
 
   .contact-title {

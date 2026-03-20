@@ -156,7 +156,7 @@
     grid-template-columns: 1fr;
     min-height: auto;
     gap: 24px;
-    padding: calc(var(--header-offset) + 28px) 20px 28px;
+    padding: calc(var(--header-offset) + 28px) 8px 28px;
   }
 
   .services-title {
@@ -175,7 +175,7 @@
 
   .service-card {
     min-height: 33svh;
-    padding: 28px 20px;
+    padding: 28px 8px;
   }
 
   .service-accent {

@@ -7,7 +7,6 @@ function PortfolioSection({
   sectionId,
   sectionKey,
   index,
-  kicker,
   title,
   subtitle,
   description,
@@ -27,7 +26,6 @@ function PortfolioSection({
         style={{ background }}
       >
         <div className="portfolio-showcase-copy">
-          <p className="section-kicker">{kicker}</p>
           <h2>{getLocalizedText(title, lang)}</h2>
           {subtitle ? (
             <p className="portfolio-subtitle">{getLocalizedText(subtitle, lang)}</p>
@@ -91,7 +89,6 @@ function PortfolioSection({
         </div>
 
         <div className="portfolio-gallery-copy">
-          <p className="section-kicker">{kicker}</p>
           <h2>{getLocalizedText(title, lang)}</h2>
           {subtitle ? (
             <p className="portfolio-subtitle">{getLocalizedText(subtitle, lang)}</p>
@@ -110,8 +107,6 @@ function PortfolioSection({
         className="panel portfolio-panel portfolio-panel-stacked"
         style={{ background }}
       >
-        <div className="portfolio-stacked-label">{kicker}</div>
-
         <div className="portfolio-stacked-list">
           {blocks?.map((block, blockIndex) => (
             <article
@@ -176,7 +171,6 @@ function PortfolioSection({
     <section id={sectionId} data-section-key={sectionKey} className="panel portfolio-panel">
       <div className="portfolio-index">0{index}</div>
       <div className="portfolio-content">
-        <p className="section-kicker">{kicker}</p>
         <h2>{getLocalizedText(title, lang)}</h2>
         {subtitle ? <p className="portfolio-subtitle">{getLocalizedText(subtitle, lang)}</p> : null}
         <p>{getLocalizedText(description, lang)}</p>

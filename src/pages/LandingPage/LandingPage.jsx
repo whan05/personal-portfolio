@@ -4,13 +4,11 @@ import PortfolioSection from './sections/PortfolioSection/PortfolioSection'
 import ServicesSection from './sections/ServicesSection/ServicesSection'
 import TestimonialsSection from './sections/TestimonialsSection/TestimonialsSection'
 import ContactSection from './sections/ContactSection/ContactSection'
-import { navItems } from '../../data/navigation'
 import { portfolioItems } from '../../data/portfolio'
 import { servicesContent } from '../../data/services'
 import { testimonialsContent } from '../../data/testimonials'
 import { contactContent } from '../../data/contact'
 import { heroContent } from '../../data/hero'
-import getLocalizedText from '../../utils/getLocalizedText'
 
 function LandingPage({ lang, onNavigate }) {
   return (
@@ -29,7 +27,6 @@ function LandingPage({ lang, onNavigate }) {
           lang={lang}
           sectionId={`portfolio-${index + 1}`}
           sectionKey={`portfolio-${index + 1}`}
-          kicker={getLocalizedText(navItems[index + 2].label, lang)}
           index={index + 1}
           {...item}
         />

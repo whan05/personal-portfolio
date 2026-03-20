@@ -20,3 +20,17 @@
   flex-direction: column;
   flex: 0 0 auto;
 }
+
+@media (max-width: 960px) {
+  .page-shell {
+    height: auto;
+    overflow: visible;
+  }
+
+  .page-main {
+    height: auto;
+    overflow: visible;
+    scroll-snap-type: none;
+    overscroll-behavior-y: auto;
+  }
+}

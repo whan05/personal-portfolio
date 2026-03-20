@@ -48,7 +48,6 @@
 
 @media (max-width: 960px) {
   .side-dots {
-    right: 6px;
-    gap: 10px;
+    display: none;
   }
 }

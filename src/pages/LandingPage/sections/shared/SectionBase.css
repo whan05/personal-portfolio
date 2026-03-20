@@ -20,6 +20,11 @@
 
 @media (max-width: 960px) {
   .panel {
-    padding: calc(56px + var(--header-offset)) 20px 56px;
+    flex-basis: auto;
+    height: auto;
+    min-height: auto;
+    padding: calc(56px + var(--header-offset)) 8px 56px;
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
   }
 }

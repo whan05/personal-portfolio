@@ -3,9 +3,9 @@ import './Header.css'
 function Header({ lang, setLang, menuOpen, onNavigate, onToggleMenu }) {
   return (
     <header className="site-header">
-      <button type="button" className="brand brand-button" onClick={() => onNavigate('inicio')}>
+      <button type="button" className="brand brand-button" aria-label={lang === 'es' ? 'Whanderley Fonseca Picado — Inicio' : 'Whanderley Fonseca Picado — Home'} onClick={() => onNavigate('inicio')}>
         <span className="brand-mark" aria-hidden="true">
-          WF
+          <img src="/brand.svg" alt="" width="44" height="44" />
         </span>
         <span className="brand-copy">
           <strong>Whanderley</strong>
@@ -36,7 +36,7 @@ function Header({ lang, setLang, menuOpen, onNavigate, onToggleMenu }) {
           className={`menu-toggle ${menuOpen ? 'is-open' : ''}`}
           aria-expanded={menuOpen}
           aria-controls="site-menu"
-          aria-label={menuOpen ? 'Cerrar menu' : 'Abrir menu'}
+          aria-label={lang === 'es' ? (menuOpen ? 'Cerrar menú' : 'Abrir menú') : (menuOpen ? 'Close menu' : 'Open menu')}
           onClick={onToggleMenu}
         >
           <span></span>

@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 
-function useInfiniteLoopScroll(mainRef) {
+function useInfiniteLoopScroll(mainRef, enabled = true) {
   useEffect(() => {
     const scrollRoot = mainRef.current
 
-    if (!scrollRoot) {
+    if (!scrollRoot || !enabled) {
       return undefined
     }
 
@@ -48,7 +48,7 @@ function useInfiniteLoopScroll(mainRef) {
       scrollRoot.removeEventListener('touchstart', handleTouchStart)
       scrollRoot.removeEventListener('touchmove', handleTouchMove)
     }
-  }, [mainRef])
+  }, [mainRef, enabled])
 }
 
 export default useInfiniteLoopScroll

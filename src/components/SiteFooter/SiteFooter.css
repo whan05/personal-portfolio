@@ -1,0 +1,8 @@
+.site-footer { background: var(--text-h); color: var(--bg-soft); padding: 28px 64px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+.site-footer a { color: inherit; font-size: .8rem; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.site-footer .footer-name { font-weight: 600; }
+.footer-name span { display: block; margin-top: 4px; font-size: .7rem; font-weight: 400; opacity: .8; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 24px; }
+.site-footer small { font-size: .65rem; opacity: .8; }
+@media (max-width: 768px) { .site-footer { padding: 24px; align-items: flex-start; flex-direction: column; gap: 20px; } }

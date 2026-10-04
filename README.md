@@ -1,5 +1,32 @@
 # React + Vite
 
+## Portfolio content
+
+The initial language is English; ES/EN switches the page content.
+Experience routes use `#/experiencias/<slug>`.
+
+Optional project galleries and achievements are configured in
+`src/data/experienceDetails.js`, under each experience slug. Empty arrays hide
+their sections. Add image files to `public/projects/` and reference them like this:
+
+```js
+projects: [
+  {
+    src: '/projects/project-name.webp',
+    alt: { en: 'Description of the project screen', es: 'Descripción de la pantalla del proyecto' },
+    caption: { en: 'Project name and contribution', es: 'Nombre del proyecto y aporte' },
+  },
+],
+achievements: [
+  { en: 'A verified achievement', es: 'Un logro comprobado' },
+],
+```
+
+Bee Loyal Card and Globant have achievements populated. Bee includes public
+project images with source links; downloaded image sources are recorded in
+`public/projects/sources.json`. Images can be added to any role. Contact and
+experience pages share `SiteFooter`.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

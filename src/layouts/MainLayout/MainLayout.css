@@ -11,6 +11,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
+  scrollbar-width: none;
   scroll-behavior: smooth;
   overscroll-behavior-y: none;
 }
@@ -20,6 +21,12 @@
   flex-direction: column;
   flex: 0 0 auto;
 }
+
+.page-main-detail { scroll-snap-type: none; }
+
+.page-shell-detail .site-header { background: rgba(245,245,237,.95); border-bottom: 1px solid var(--border); }
+
+.page-main::-webkit-scrollbar { display: none; }
 
 @media (max-width: 960px) {
   .page-shell {

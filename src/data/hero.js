@@ -1,18 +1,6 @@
 export const heroContent = {
-  title: {
-    es: 'Desarrollador web full stack',
-    en: 'Full stack web developer',
-  },
-  description: {
-    es: 'Desarrollo experiencias modernas para presentar servicios, proyectos y resultados con una narrativa visual directa.',
-    en: 'I build modern digital experiences to present services, projects and results with a clear visual narrative.',
-  },
-  primaryAction: {
-    label: { es: 'Ver proyectos', en: 'View projects' },
-    href: '#portfolio-1',
-  },
-  secondaryAction: {
-    label: { es: 'Hablemos', en: "Let's talk" },
-    href: '#contact',
-  },
+ title: { es: 'Desarrollador web full stack', en: 'Full stack web developer' },
+ description: { es: 'Soy Whanderley Fonseca Picado. Más de 5 años construyendo y manteniendo aplicaciones web y móviles, con enfoque en código limpio, pruebas, escalabilidad y experiencia de usuario. Desde San José, Costa Rica.', en: 'I’m Whanderley Fonseca Picado. Over 5 years building and maintaining web and mobile applications, focusing on clean code, testing, scalability and user experience. Based in San José, Costa Rica.' },
+ primaryAction: { label: { es: 'Ver experiencia', en: 'View experience' }, href: '#experiencias' },
+ secondaryAction: { label: { es: 'Hablemos', en: 'Let’s talk' }, href: '#contact' },
 }

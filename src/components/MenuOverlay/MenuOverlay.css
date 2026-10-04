@@ -1,47 +1,12 @@
-.menu-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 15;
-  display: grid;
-  place-items: center;
-  padding: 96px 24px 48px;
-  background: rgba(16, 21, 17, 0.76);
-  backdrop-filter: blur(18px);
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 0.25s ease,
-    visibility 0.25s ease;
-}
-
-.menu-overlay.is-open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.overlay-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-}
-
-.overlay-link {
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: #f4f0e4;
-  text-decoration: none;
-  font-family: var(--heading);
-  font-size: clamp(1.8rem, 3vw, 3.5rem);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-@media (max-width: 960px) {
-  .overlay-link {
-    text-align: center;
-    font-size: clamp(1.45rem, 8vw, 2.3rem);
-  }
-}
+.menu-overlay { position: fixed; inset: 0; z-index: 30; padding: 40px 64px; background: var(--text-h); color: var(--bg-soft); opacity: 0; visibility: hidden; overflow-y: auto; transition: opacity .2s ease, visibility .2s ease; }
+.menu-overlay.is-open { opacity: 1; visibility: visible; }
+.menu-content { max-width: 1400px; margin: auto; }
+.menu-top { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,.2); font-size: .85rem; }
+.menu-close { color: inherit; background: transparent; border: 1px solid rgba(255,255,255,.3); padding: 8px 16px; cursor: pointer; }
+.overlay-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding-top: 40px; }
+.overlay-nav p { font-size: .75rem; text-transform: uppercase; letter-spacing: .15em; opacity: .7; margin-bottom: 16px; }
+.overlay-link { display: flex; justify-content: space-between; align-items: center; gap: 16px; width: 100%; padding: 12px 0; border: 0; border-bottom: 1px solid rgba(255,255,255,.15); background: transparent; color: inherit; text-align: left; font-family: var(--heading); font-size: clamp(1.25rem, 2.5vw, 2.5rem); cursor: pointer; }
+.overlay-link span { font-family: var(--sans); font-size: 1rem; opacity: .6; }
+.overlay-link:hover { color: #a7dfbf; }
+@media (max-width: 768px) { .menu-overlay { padding: 24px; } .overlay-nav { gap: 32px; padding-top: 24px; } .overlay-link { font-size: 1.15rem; padding: 14px 0; } }
+@media (max-width: 480px) { .overlay-nav { grid-template-columns: 1fr; gap: 32px; } }
